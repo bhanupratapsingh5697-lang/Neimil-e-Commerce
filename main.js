@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(
 
                 navbar.querySelectorAll("a, button, i").forEach(el => {
                     el.classList.add("text-black");
-                    el.classList.remove("text-white");
+                    el.classList.remove("text-black");
                 });
 
             } else {
