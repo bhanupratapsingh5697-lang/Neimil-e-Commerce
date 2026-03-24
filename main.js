@@ -20,7 +20,7 @@ const observer = new IntersectionObserver(
 
                 navbar.querySelectorAll("a, button, i").forEach(el => {
                     el.classList.remove("text-black");
-                    el.classList.add("text-white");
+                    el.classList.add("text-black");
                 });
             }
         });
