@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Neimil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="background">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="100%"
+          height="100%"
+          viewBox="0 0 1600 900"
+        >
+          <defs>
+            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="50%" stop-color="#ecb76da5" stop-opacity="0.7" />
+              <stop offset="65%" stop-color="#ecb76da5" stop-opacity="0.7" />
+            </linearGradient>
+            <path
+              id="wave"
+              fill="url(#bgGradient)"
+              d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+      s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+            />
+          </defs>
+          <g>
+            <use xlink:href="#wave" opacity=".4">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="8s"
+                calcMode="spline"
+                values="270 230; -334 180; 270 230"
+                keyTimes="0; .5; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacity=".6">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="6s"
+                calcMode="spline"
+                values="-270 230;243 220;-270 230"
+                keyTimes="0; .6; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacty=".9">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="4s"
+                calcMode="spline"
+                values="0 230;-140 200;0 230"
+                keyTimes="0; .4; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+          </g>
+        </svg>
+      </div>
+      <img
+        src="https://neimil.com/cdn/shop/files/neimil_white.png?v=1771420477&width=300"
+        class="logo"
+      />
+      <form class="form">
+        <div class="textbox">
+          <img src="images/person.svg" />
+          <input required type="text" autocomplete="off" />
+          <label>Email</label>
+        </div>
+        <div class="textbox">
+          <img src="images/lock.svg" />
+          <input required type="password" />
+          <label>Password</label>
+        </div>
+        <button type="submit">
+          <p>Login</p>
+          <span class="material-symbols-outlined"
+            ><i class="bi bi-arrow-right"></i
+          ></span>
+        </button>
+      </form>
+      <a>Forgot password?</a>
+      <p class="footer">
+        By using this website you agree to our
+        <a>privacy policy</a> and <a>terms of use</a>.
+      </p>
+    </div>
+    <div
+      class="bg-[#302f32] text-white p-4 rounded-full fixed top-10 left-10 uppercase cursor-pointer"
+    >
+      <a class="p-4" href="index.html">GO back</a>
+    </div>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"
+    ></script>
+  </body>
+</html>
