@@ -1,0 +1,938 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neimil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="neimil_black.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <header>
+      <nav
+        id="navbar"
+        class="bg-transparent lg:px-10 fixed w-full z-20 top-0 border-b border-gray-200 transition-all duration-300"
+      >
+        <div class="max-w-screen flex items-center justify-between mx-auto p-4">
+          <div class="flex items-center order-1">
+            <button
+              data-collapse-toggle="navbar-dropdown"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <div
+              id="navbar-dropdown"
+              class="hidden absolute top-full left-0 w-full bg-white shadow-lg lg:static lg:flex lg:bg-transparent lg:shadow-none"
+            >
+              <ul class="flex flex-col lg:flex-row lg:space-x-8 p-4 lg:p-0">
+                <li>
+                  <a
+                    href="#"
+                    class="group text-black block uppercase text-[12px] py-2 hover-underline flex items-center gap-1"
+                  >
+                    new
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="womenTrigger"
+                    href="#"
+                    class="menu-trigger group block uppercase text-[12px] py-2 text-black hover-underline flex flex-row gap-1"
+                  >
+                    womens
+                    <i
+                      class="bi bi-chevron-down transition-transform duration-300 group-hover:rotate-180"
+                    ></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    id="menTrigger"
+                    href="#"
+                    class="menu-trigger group block uppercase text-[12px] py-2 text-black hover-underline flex flex-row gap-1"
+                    >men<i
+                      class="bi bi-chevron-down transition-transform duration-300 group-hover:rotate-180"
+                    ></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    id="lifeTrigger"
+                    href="#"
+                    class="menu-trigger group block uppercase text-[12px] py-2 text-black hover-underline flex flex-row gap-1"
+                    >lifestyle<i
+                      class="bi bi-chevron-down transition-transform duration-300 group-hover:rotate-180"
+                    ></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    id="colTrigger"
+                    href="#"
+                    class="menu-trigger group block uppercase text-[12px] py-2 text-black hover-underline flex flex-row gap-1"
+                    >collections<i
+                      class="bi bi-chevron-down transition-transform duration-300 group-hover:rotate-180"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-center order-2">
+            <img
+              src="https://neimil.com/cdn/shop/files/neimil_white.png?v=1771420477&width=300"
+              class="h-10"
+            />
+          </div>
+          <div class="flex items-center gap-4 order-3">
+            <button
+              type="button"
+              class="hidden text-black hover-underline lg:flex text-sm uppercase"
+            >
+              south africa
+            </button>
+            <i class="bi bi-search text-xl text-black hover-underline"></i>
+            <i class="bi bi-person text-xl text-black hover-underline"></i>
+            <i
+              id="countryBtn"
+              class="bi bi-bag text-xl text-black hover-underline"
+            ></i>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="megaMenu"
+        class="fixed left-0 top-[70px] w-full h-[600px] bg-white shadow-xl opacity-0 invisible transition-all duration-300 z-10"
+      >
+        <div
+          id="megaContent"
+          class="w-full mx-auto grid grid-cols-3 gap-10 px-20 py-10"
+        ></div>
+      </div>
+    </header>
+    <main>
+      <section id="hero" class="w-full h-screen">
+        <video
+          class="w-full h-full object-cover"
+          autoplay
+          muted
+          loop
+          playsinline
+          src="videos/neimi.vid.mp4"
+        ></video>
+      </section>
+      <section class="py-10">
+        <div class="h-full w-full bg-white p-10">
+          <div class="flex flex-row justify-between">
+            <h2 class="text-4xl font-normal uppercase">Polepole</h2>
+            <div class="flex flex-row gap-5 items-center">
+              <a
+                class="uppercase text-sm md:block hidden hover-underline cursor-pointer"
+                >shop the collection</a
+              >
+              <div class="flex flex-nowrap gap-3 opacity-[0.8]">
+                <i
+                  class="bi bi-arrow-left-short text-black text-2xl swiper-button-prev-1"
+                ></i>
+                <i
+                  class="bi bi-arrow-right-short text-black text-2xl swiper-button-next-1"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper mySwiper mt-8">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="Wavu dress bloo (LIMITED)"
+                data-price="R 2,599.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0032.jpg?v=1770230275&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0037.jpg?v=1770230275&width=840"
+                data-color="#9bb6d1"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0032.jpg?v=1770230275&width=840"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-200 group-hover:opacity-0 group-hover:scale-110"
+                  />
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0037.jpg?v=1770230275&width=840"
+                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:scale-110"
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold">
+                    Wavu dress bloo (LIMITED)
+                  </span>
+                  <span class="uppercase">R 2,599.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="paje suit (limited)"
+                data-price="R 3,799.99 - R 3,899.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0017.jpg?v=1770227829&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0013.jpg?v=1770227829&width=840"
+                data-color="#441f13"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0017.jpg?v=1770227829&width=840"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-200 group-hover:opacity-0 group-hover:scale-110"
+                  />
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:scale-110"
+                    src="https://neimil.com/cdn/shop/files/DSCF0013.jpg?v=1770227829&width=840"
+                    alt=""
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold"
+                    >paje suit (limited)</span
+                  >
+                  <span class="uppercase">R 3,799.99 - R 3,899.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="pine bag bloo"
+                data-price="R 3,499.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0060.jpg?v=1770229475&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0060.jpg?v=1770229475&width=840"
+                data-color="#9bb6d1"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0060.jpg?v=1770229475&width=840"
+                    class="h-10 rounded-lg"
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold">pine bag bloo</span>
+                  <span class="uppercase">R 3,499.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="shanga blazer"
+                data-price="R 3,299.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0151.jpg?v=1770227019&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0178.jpg?v=1770227019&width=840"
+                data-color="#282099"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0151.jpg?v=1770227019&width=840"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-200 group-hover:opacity-0 group-hover:scale-110"
+                  />
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0178.jpg?v=1770227019&width=840"
+                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:scale-110"
+                    alt=""
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold">shanga blazer</span>
+                  <span class="uppercase">R 3,299.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="lua co-ord"
+                data-price="R 2,199.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0138_81e04729-7517-4d9c-afca-3c4950e83562.jpg?v=1770228972&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0115_747b3f61-0cc8-46e7-a51a-76d0d1474c80.jpg?v=1770228972&width=840"
+                data-color="#441f13"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0138_81e04729-7517-4d9c-afca-3c4950e83562.jpg?v=1770228972&width=840"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-200 group-hover:opacity-0 group-hover:scale-110"
+                  />
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:scale-110"
+                    src="https://neimil.com/cdn/shop/files/DSCF0115_747b3f61-0cc8-46e7-a51a-76d0d1474c80.jpg?v=1770228972&width=840"
+                    alt=""
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold">lua co-ord</span>
+                  <span class="uppercase">R 2,199.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="wuva skirt (limited)"
+                data-price="R 1,899.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0229.jpg?v=1770226580&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0261.jpg?v=1770226580&width=720"
+                data-color="#9bb6d1"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0229.jpg?v=1770226580&width=840"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-200 group-hover:opacity-0 group-hover:scale-110"
+                  />
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0261.jpg?v=1770226580&width=720"
+                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:scale-110"
+                    alt=""
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold"
+                    >wuva skirt (limited)</span
+                  >
+                  <span class="uppercase">R 1,899.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="roving blouse"
+                data-price="R 1,999.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0542.jpg?v=1770225620&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0542.jpg?v=1770225620&width=840"
+                data-color="#441f13"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0542.jpg?v=1770225620&width=840"
+                    class="h-10 rounded-lg"
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold">roving blouse</span>
+                  <span class="uppercase">R 1,999.99</span>
+                </div>
+              </div>
+              <div
+                class="swiper-slide flex flex-col gap-2 bg-white product"
+                data-title="pata suit (limited)"
+                data-price="R 3,499.99"
+                data-img1="https://neimil.com/cdn/shop/files/DSCF0620.jpg?v=1770226047&width=840"
+                data-img2="https://neimil.com/cdn/shop/files/DSCF0624.jpg?v=1770226047&width=840"
+                data-color="#d1d1cd"
+              >
+                <div
+                  class="w-full h-[495px] relative group cursor-pointer overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="https://neimil.com/cdn/shop/files/DSCF0620.jpg?v=1770226047&width=840"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-200 group-hover:opacity-0 group-hover:scale-110"
+                  />
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:scale-110"
+                    src="https://neimil.com/cdn/shop/files/DSCF0624.jpg?v=1770226047&width=840"
+                    alt=""
+                  />
+                  <button
+                    class="quickViewBtn absolute bottom-4 right-4 bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition duration-300 hover:scale-110"
+                  >
+                    <i class="bi bi-plus text-xl"></i>
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2 text-sm text-start w-full">
+                  <span class="uppercase font-semibold"
+                    >pata suit (limited)</span
+                  >
+                  <span class="uppercase">R 3,499.99</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <div class="relative">
+            <img
+              class="w-full h-auto"
+              src="https://neimil.com/cdn/shop/files/DSCF0261.jpg?v=1770226580&width=1440"
+              alt=""
+            />
+
+            <div
+              class="absolute inset-0 flex items-center justify-center text-center px-4"
+            >
+              <h2
+                class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-white"
+              >
+                The Story of <i class="font-normal">Pole Pole</i>
+              </h2>
+            </div>
+          </div>
+
+          <img
+            class="w-full h-auto"
+            src="https://neimil.com/cdn/shop/files/DSCF0115.jpg?v=1770228885&width=1440"
+            alt=""
+          />
+
+          <img
+            class="w-full h-auto"
+            src="https://neimil.com/cdn/shop/files/DSCF0620.jpg?v=1770226047&width=1440"
+            alt=""
+          />
+
+          <img
+            class="w-full h-auto"
+            src="https://neimil.com/cdn/shop/files/DSCF0400_5af8880b-845f-473c-8673-b2297e3742b8.jpg?v=1770228493&width=1440"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="p-10">
+        <div
+          class="flex flex-row sm:flex-row justify-between items-center sm:items-center gap-4"
+        >
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-black uppercase"
+          >
+            best sellers
+          </h2>
+
+          <div class="flex items-center">
+            <p
+              class="uppercase text-xs sm:text-sm text-black cursor-pointer hover-underline"
+            >
+              view all products
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-full flex flex-wrap justify-start sm:justify-center gap-3 sm:gap-6 mt-4 sm:mt-6"
+        >
+          <button
+            data-target="bags"
+            class="tab-btn uppercase px-4 py-2 text-xs sm:text-sm border border-black rounded-full hover:bg-gray-200 whitespace-nowrap"
+          >
+            bags
+          </button>
+
+          <button
+            data-target="coats"
+            class="tab-btn uppercase px-4 py-2 text-xs sm:text-sm border border-black rounded-full hover:bg-gray-200 whitespace-nowrap"
+          >
+            coats & jackets
+          </button>
+
+          <button
+            data-target="dresses"
+            class="tab-btn uppercase px-4 py-2 text-xs sm:text-sm border border-black rounded-full hover:bg-gray-200 whitespace-nowrap"
+          >
+            dresses & skirts
+          </button>
+        </div>
+        <div class="scroll-main overflow-x-hidden mt-10 relative">
+          <div
+            id="bags"
+            class="tab-section scroll-1 flex flex-row gap-10 w-[180rem] relative opacity-100"
+          >
+            <div class="rounded- h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/products/42.jpg?v=1679857686&width=600"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  Lawns mini tote-blue
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 649.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/5S8A9949.jpg?v=1740911969&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  pine bag taupe
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/5S8A9945.jpg?v=1740908889&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  pine bag brown
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/5S8A9970.jpg?v=1740911664&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  pine bag white
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSCF0575.jpg?v=1770230031&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  pine bag chocolate
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSCF0060.jpg?v=1770229475&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  pine bag bloo
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3499.99
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            id="coats"
+            class="tab-section scroll-1 flex flex-row gap-10 w-[180rem] absolute top-0 left-0 opacity-0 pointer-events-none"
+          >
+            <div class="rounded- h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSCF2377_3dfef3c9-68c3-49d6-a47e-2c69add37092.jpg?v=1749635588&width=480"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  nijano denim set
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 2,449.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/AFI00027.jpg?v=1724067144&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  musomi kimono
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 1,999.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSCF2445_8465613c-9864-4670-b0d4-cf98d56e025b.jpg?v=1749635675&width=480"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  njano cream set
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 2,499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/AFI00083.jpg?v=1724068606&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  leeto denim blazer
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3,499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSC00186.jpg?v=1715189430&width=600"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  la rona jacket
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 2,499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSCF0528.jpg?v=1742750959&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  roving blazer
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 3,999.99
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            id="dresses"
+            class="tab-section scroll-1 flex flex-row gap-10 w-[180rem] absolute top-0 left-0 opacity-0 pointer-events-none"
+          >
+            <div class="rounded- h-full w-full flex flex-col gap-2">
+              <img
+                src="	https://neimil.com/cdn/shop/products/27.png?v=1680037979&width=720"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  the gem
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 1950.00
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="	https://neimil.com/cdn/shop/files/DSC01121.jpg?v=1715188154&width=600"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  voyage dress
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 1499.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/5S8A9910.jpg?v=1740905877&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  pole pole dress
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 1399.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="	https://neimil.com/cdn/shop/files/AFI00361.jpg?v=1724069856&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  hele dress
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 1399.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="	https://neimil.com/cdn/shop/files/AFI00249.jpg?v=1724066247&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  hele overlay skirt | denim
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 699.99
+                </h3>
+              </div>
+            </div>
+            <div class="rounded-lg h-full w-full flex flex-col gap-2">
+              <img
+                src="https://neimil.com/cdn/shop/files/DSC02649.jpg?v=1707214190&width=840"
+                class="rounded-lg"
+                alt=""
+              />
+              <div class="flex flex-col">
+                <h2 class="text-sm font-semibold text-black uppercase">
+                  off-shoulder gem
+                </h2>
+                <h3 class="uppercase text-sm font-semibold text-black">
+                  r 1799.99
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-sec max-w-screen h-full mt-10 cursor-none">
+        <div class="image w-full relative h-full">
+          <img
+            class="w-full h-full object-cover"
+            src="https://neimil.com/cdn/shop/files/DSC00886.jpg?v=1757606748&width=1440"
+            alt=""
+          />
+          <div
+            class="overlay absolute inset-0 z-9 flex items-center justify-center gap-8 flex-col text-center px-4"
+          >
+            <h2
+              class="font-semibold h2x text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight"
+            >
+              Made in Africa. Made to Last.
+            </h2>
+
+            <p
+              class="uppercase ptx text-white text-xs sm:text-sm md:text-base lg:text-lg mt-2 max-w-2xl"
+            >
+              locally produced fashion and homeware celebrating african heritage
+              through modern design
+            </p>
+            <button
+              class="cursor-none btx_image hover:bg-white hover:text-black transition-all duration-200 border border-white rounded-full uppercase text-white text-sm px-4 py-2"
+            >
+              our story
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-black w-full px-6 py-10">
+      <div class="flex flex-col lg:flex-row gap-10 justify-between">
+        <div class="flex flex-col w-full gap-6">
+          <p class="text-sm uppercase text-white">
+            Be the first to know about new collections and drops.
+          </p>
+          <div class="flex w-full sm:w-80 bg-white">
+            <input
+              type="text"
+              placeholder="Email address"
+              class="w-full p-2 outline-none border-0 text-black"
+            />
+            <button
+              class="px-6 py-2 bg-white hover:bg-gray-200 uppercase text-black text-xs"
+            >
+              subscribe
+            </button>
+          </div>
+          <div class="flex gap-5 text-white text-xl cursor-pointer">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-youtube"></i>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full">
+          <ul>
+            <p class="uppercase text-xs text-gray-400 pb-3">the brand</p>
+            <li class="text-white text-sm uppercase cursor-pointer">about</li>
+            <li class="text-white text-sm uppercase cursor-pointer">values</li>
+            <li class="text-white text-sm uppercase cursor-pointer">contact</li>
+          </ul>
+
+          <ul>
+            <p class="uppercase text-xs text-gray-400 pb-3">legal</p>
+            <li class="text-white text-sm uppercase cursor-pointer">
+              shipping policy
+            </li>
+            <li class="text-white text-sm uppercase cursor-pointer">
+              refund policy
+            </li>
+            <li class="text-white text-sm uppercase cursor-pointer">
+              privacy policy
+            </li>
+          </ul>
+
+          <ul>
+            <p class="uppercase text-xs text-gray-400 pb-3">shop</p>
+            <li class="text-white text-sm uppercase cursor-pointer">womens</li>
+            <li class="text-white text-sm uppercase cursor-pointer">mens</li>
+            <li class="text-white text-sm uppercase cursor-pointer">
+              accessories
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="drawer-country"
+      class="fixed top-0 right-0 z-50 h-screen p-6 overflow-y-auto transition-transform translate-x-full bg-white w-full sm:w-1/3 shadow-2xl"
+    >
+      <button id="closeDrawer" class="absolute top-4 right-4 text-xl">✕</button>
+
+      <h2 class="text-lg font-semibold mb-4">Choose options</h2>
+      <div class="grid grid-cols-2 gap-3 mb-4">
+        <img id="dImg1" class="rounded-lg w-full" />
+        <img id="dImg2" class="rounded-lg w-full" />
+      </div>
+      <h3 id="dTitle" class="font-semibold uppercase text-sm mb-2"></h3>
+      <p id="dPrice" class="text-sm mb-4"></p>
+      <div class="mb-4">
+        <p class="text-xs uppercase mb-2">Color</p>
+        <div id="dColor" class="w-6 h-6 border"></div>
+      </div>
+      <div>
+        <p class="text-xs uppercase mb-2">Size</p>
+        <div class="flex gap-2">
+          <button class="border px-2">S</button>
+          <button class="border px-2">M</button>
+          <button class="border px-2">L</button>
+          <button class="border px-2">XL</button>
+        </div>
+      </div>
+      <div class="mt-6 space-y-3">
+        <button
+          id="addToCartBtn"
+          class="w-full rounded-full py-3 text-sm uppercase text-gray-600 bg-gray-200 transition"
+        >
+          Add to Cart
+        </button>
+        <button
+          id="buyNowBtn"
+          class="w-full rounded-full border border-black text-black bg-white hover:bg-black hover:text-white h py-3 text-sm uppercase hover:opacity-80 transition"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-6 right-6 bg-black text-white px-4 py-3 rounded-full hidden z-50"
+    >
+      <i class="bi font-bold text-white bi-chevron-up"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

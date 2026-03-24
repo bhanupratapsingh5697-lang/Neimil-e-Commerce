@@ -1,0 +1,63 @@
+.hover-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(52, 50, 50);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-scrolled {
+  background-color: white;
+}
+
+.navbar-scrolled .nav-text {
+  color: black !important;
+}
+
+.navbar-default .nav-text {
+  color: white;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image img {
+  object-position: center;
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  z-index: 10;
+}
